@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<var name="cart" class="com.saisha.toyland.model.Cart" />
+
+	 
+
+	<action-state id="processCheckout">
+		<evaluate expression="cartDAOImpl.findById(requestParameters.cartId)"
+			result="cart"></evaluate>
+		<transition to="InvalidCartWarning" on-exception="java.lang.NullPointerException" />
+		<transition to="collectCustomerInfo" />
+	</action-state>
+
+	<view-state id="collectCustomerInfo" view="billing.jsp"
+		model="cart">
+		<transition on="submit" to="orderConfirmation" />
+		<transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
+	</view-state>
+
+
+	<view-state id="orderConfirmation" view="checkOut.jsp"
+		model="cart">
+		<transition on="submit" to="saveOrder" />
+		<transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
+	</view-state>
+
+	<action-state id="saveOrder">
+		<evaluate expression="cartDAOImpl.modifyCart(cart)" result="cart"></evaluate>
+		<transition to="InvalidCartWarning" on-exception="java.lang.NullPointerException" />
+		<transition to="processOrder" />
+	</action-state>
+
+	<view-state id="processOrder" view="thankyou.jsp">
+		<transition on="submit" to="thankCustomer" />
+		<transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
+	</view-state>
+
+	<view-state id="thankCustomer" model="cart">
+		<transition to="endState" />
+	</view-state>
+
+	<end-state id="endState" />
+
+	<view-state id="invalidCartWarning">
+		<transition to="endState" />
+	</view-state>
+
+	<end-state id="cancelCheckout" view="checkOutCancelled.jsp" />
+
+	<global-transitions>
+		<transition on="cancel" to="cancelCheckout" />
+	</global-transitions>
+
+</flow>

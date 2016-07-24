@@ -1,0 +1,25 @@
+h1
+{
+	font-family : Comic Sans MS;
+	text-align : center;
+	font-size : 400%;
+	color : blue;
+}
+
+body
+{
+	background-color : Violet;
+	margin-left : 10%;
+	margin-right: 10%;
+	padding 10px 10px 10px 10px;
+}
+
+footer 
+{
+	position : absolute;
+	left : 0;
+	bottom : 0;
+	height : 100px;
+	width : 100%;
+	overflow : hidden;	
+}
