@@ -68,6 +68,10 @@ public class CartDAOImpl implements CartDAO{
 			mycart.setPincode(cart.getPincode());
 			mycart.setState(cart.getState());
 			session.update(mycart);
+			
+//			Product p = new ProductDAOImpl().getProduct(cart.getProductId());
+//			p.setStock(p.getStock() - mycart.getQuantity());
+//			session.update(p);
 		}
 		//session.saveOrUpdate(cart);
 		session.flush();

@@ -51,14 +51,12 @@ public class ProductController {
 		return new Cart();
 	}
 	@RequestMapping(value = "/addProduct", method = RequestMethod.POST)
-	public ModelAndView addProduct(@ModelAttribute("product") Product product,BindingResult result, HttpServletRequest request, ModelMap model) {
+	public ModelAndView addProduct(@ModelAttribute("product") Product product, BindingResult result, HttpServletRequest request, ModelMap model) {
 		System.out.println("adding product");
 		productDAO.addNewProduct(product);
 		
-		
 		File file = new File(request.getServletContext().getRealPath("/resources/images/")+ product.getProductId()+".jpg");//---in server
 		System.out.println(request.getServletContext().getRealPath("/resources/images/")+ product.getProductId()+".jpg");
-		//	File file = new File("/resources/images/"+ product.getProductId()+".jpg");
 		System.out.println(file.getAbsolutePath() + " " + file.getName());
 		if(!product.getImg().isEmpty())	 
 		try {
@@ -85,6 +83,17 @@ public class ProductController {
 	@RequestMapping(value="product/edit/{productId}", method = RequestMethod.GET)
 	public ModelAndView editProduct(@PathVariable("productId")int id, @ModelAttribute("product")Product product)
 	{
+		
+//		File file = new File(request.getServletContext().getRealPath("/resources/images/")+ product.getProductId()+".jpg");//---in server
+//		System.out.println(request.getServletContext().getRealPath("/resources/images/")+ product.getProductId()+".jpg");
+//		System.out.println(file.getAbsolutePath() + " " + file.getName());
+//		if(!product.getImg().isEmpty())	 
+//		try {
+//			FileUtils.writeByteArrayToFile(file, product.getImg().getBytes());
+//			System.out.println("File Uploaded");
+//		} catch (IOException e) {
+//		e.printStackTrace();
+//		}
 		System.out.println("product is being modified..");
 		product=productDAO.getProduct(id);
 		System.out.println(product.getProductName());

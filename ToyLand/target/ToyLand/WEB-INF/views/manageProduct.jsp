@@ -4,6 +4,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Product Management</title>
+<script>
+function delConf(){
+	var d = confirm("are you sure to delete this item?")
+	if(d){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+</script>
 </head>
 <body>
 <h2 align="center">Toy Products</h2>
@@ -19,6 +30,7 @@
 			<th style="vertical-align: top">Description</th>
 			<th style="vertical-align: top">Price</th>
 			<th style="vertical-align: top">Manufacturer</th>
+			<th style="vertical-align: top">Stock</th>
 <!-- 			<th>Supplier</th> -->
 			<th style="text-align : center"><span class="glyphicon glyphicon-edit"></span></th>
 			<th style="text-align : center"><span class="glyphicon glyphicon-trash"></span></th>
@@ -27,15 +39,17 @@
 		<c:forEach items="${products}" var="product" varStatus="status">
 			<tr>
 				<td>${status.count}</td>
-				<td>${product.productId}</td>
+				<td>P00${product.productId}</td>
 				<td>${product.productName}</td>
 <%-- 				<td>${product.category}</td> --%>
 				<td>${product.productDescription}</td>
 				<td>${product.productPrice}</td>
 				<td>${product.manufacturer}</td>
+				<td>${product.stock}</td>
 <%-- 				<td>${product.supplier}</td> --%>
 				<td><a href="product/edit/${product.productId}" class="btn btn-default">Edit</a></td>
-				<td><a href="product/delete/${product.productId}" class="btn btn-default">Delete</a></td>
+				<td><a href="product/delete/${product.productId}" onclick="delConf()" class="btn btn-default">Delete</a></td>
+<!-- 				<td><a class="btn btn-default" onclick="delConf()">Delete</a></td> -->
 			</tr>
 		</c:forEach>
 	</table>

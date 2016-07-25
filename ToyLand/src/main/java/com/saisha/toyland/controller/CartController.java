@@ -92,12 +92,13 @@ public class CartController {
 //		return mv;
 //	}
 	
-	@RequestMapping(value="cart/edit/{cartId}", method = RequestMethod.GET)
+	@RequestMapping(value="/user/cart/edit/{cartId}", method = RequestMethod.GET)
 	public String editCart(@PathVariable("cartId")int id, @ModelAttribute("cart")Cart cart)
 	{
 		System.out.println("controller says cart item is being changed..");
 		cartDAO.edit(id, cart);
 		return "redirect:/productdetails/{productId}";
+//		return "redirect:/user/productdetails/{productId}";
 	}
 
 	@RequestMapping(value="/user/cart/delete/{cartId}", method = RequestMethod.GET)

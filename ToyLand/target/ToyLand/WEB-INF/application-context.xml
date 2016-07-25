@@ -15,8 +15,8 @@
 		<property name="url" value="jdbc:h2:tcp://localhost/~/toysdb"></property>
 		<property name="username" value="player"></property>
 		<property name="password" value="password"></property>
-
 	</bean>
+	
 	<context:component-scan base-package="com.saisha.toyland" />
 	<bean id="mysessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

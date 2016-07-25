@@ -37,7 +37,6 @@
 					<div class="form-group">
 						<label>Contact No.:</label>
 						<form:input path="contactNumber" class="form-control" required="true"/>
-						
 					</div>
 				</div>
 				<h4>Supplier Address :</h4>

@@ -16,17 +16,8 @@
 				<form:form commandName="product" role="form" action="${pageContext.request.contextPath}/addProduct" method="POST" enctype="multipart/form-data">
 					<div class="form-group">
 						<label>Name</label>
-						<form:input path="productName" class="form-control"
-							required="true" />
+						<form:input path="productName" class="form-control" required="true" />
 					</div>
-<!-- 					<div class="form-group"> -->
-<!-- 						<label>Category</label> -->
-<%-- 						<form:input path="category" class="form-control" required="true" /> --%>
-<!-- 					</div> -->
-<!-- 					<div class="form-group"> -->
-<!-- 						<label>Supplier</label> -->
-<%-- 						<form:input path="supplier" class="form-control" required="true" /> --%>
-<!-- 					</div> -->
 					<div class="form-group">
 					<div class="dropdown">
 					<label>Category</label><br>
@@ -43,12 +34,16 @@
 					</div>
 					<div class="form-group">
 						<label>Price</label>
-						<form:input path="productPrice" class="form-control"
-							required="true" />
+						<form:input path="productPrice" min="100" class="form-control"/>
+<%-- 						<form:errors path="productPrice" cssClass="error" /> --%>
 					</div>
 					<div class="form-group">
 						<label>Manufacturer</label>
 						<form:input class="form-control" path="manufacturer" />
+					</div>
+					<div class="form-group">
+						<label>Stock</label>
+						<form:input class="form-control" path="stock" />
 					</div>
 					<div class="form-group">
 						<label>Description</label>

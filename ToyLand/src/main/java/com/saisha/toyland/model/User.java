@@ -7,8 +7,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
-//import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
@@ -20,6 +21,7 @@ import javax.persistence.GenerationType;
 public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
 	private String userid;
 	private String firstname;
 	private String lastname;
@@ -30,17 +32,23 @@ public class User implements Serializable{
 	private String landmark;
 	private String areaName;
 	private String city;
+	
+//	@NotEmpty
+//	@Size(min=6, max=20, message = "mobile contact should be of 10 digits")
+//	@Pattern(regexp = "[7-9][0-9]{9}", message = "mobile number is expected to start with 7, 8 or 9 only")
 	private String contactNumber;
+	
+//	@NotNull
+//	@Max(value=6)
 	private int pincode;
 	private String state;
 	
-	@NotNull
-	@NotEmpty
-	@Email
+//	@NotEmpty
+//	@Email
 	private String email;
 	
-	@NotEmpty
-	@Size(min = 6, max = 15, message = "password must contain atleast 6 characters and maximum 15 characters")
+//	@NotEmpty
+//	@Size(min = 6, max = 15, message = "password must contain atleast 6 characters and maximum 15 characters")
 	private String password;
 	
 	@Id

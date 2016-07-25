@@ -6,7 +6,7 @@
 <title>Thank You</title>
 </head>
 <body>
-
+<div class="title h2 col-sm-6 col-md-6 col-lg-9">Order successfully placed. Thank you. Visit again.</div>
 </body>
 </html>
 <%@ include file="/WEB-INF/views/footer.jsp"%>

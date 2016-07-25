@@ -4,6 +4,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Product Management</title>
+<script>
+function delConf(){
+	var d = confirm("are you sure to delete this item?")
+	if(d){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+</script>
 </head>
 <body>
 <h2 align="center">Toy Products</h2>
@@ -37,7 +48,8 @@
 				<td>${product.stock}</td>
 <%-- 				<td>${product.supplier}</td> --%>
 				<td><a href="product/edit/${product.productId}" class="btn btn-default">Edit</a></td>
-				<td><a href="product/delete/${product.productId}" class="btn btn-default">Delete</a></td>
+				<td><a href="product/delete/${product.productId}" onclick="delConf()" class="btn btn-default">Delete</a></td>
+<!-- 				<td><a class="btn btn-default" onclick="delConf()">Delete</a></td> -->
 			</tr>
 		</c:forEach>
 	</table>

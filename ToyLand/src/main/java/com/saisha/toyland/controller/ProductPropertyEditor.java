@@ -19,7 +19,6 @@ ProductDAO productDAO;
 	
 	public void setAsText(String incoming)
 	{
-		
 		Product product =  productDAO.getProduct(Integer.parseInt(incoming));
 		Category category = product.getCategory();
 		setValue(category);

@@ -83,9 +83,8 @@
 						<li><a href="${pageContext.request.contextPath}/getContactUs">Contact Us</a></li>
 
 						<sec:authorize access="hasRole('ROLE_ADMIN')">
-							<li class="dropdown"><a class="dropdown-toggle"
-								data-toggle="dropdown" href="#"> Toyland Management <span
-									class="caret"></span></a>
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Toyland Management 
+							<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="addCategory">Add Category</a></li>
 									<li><a href="getCategory">View Categories</a></li>
@@ -96,9 +95,9 @@
 								</ul></li>
 
 							<li><a>Welcome "${pageContext.request.userPrincipal.name}"</a></li>
-							<li><span class="glyphicon glyphicon-king"></span> Admin</li>
-							<li><a href="<c:url value="/perform_logout" />"><span
-									class="glyphicon glyphicon-log-out"></span>Logout</a>
+							<li><a><span class="glyphicon glyphicon-king"></span> Admin</a></li>
+							<li><a href="<c:url value="/perform_logout" />">
+							<span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
 						</sec:authorize>
 					</ul>
 

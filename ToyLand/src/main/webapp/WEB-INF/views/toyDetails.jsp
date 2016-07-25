@@ -43,18 +43,14 @@
 			</tr>
 		</table>
 
-		<form:form method="POST"
-			action="${pageContext.request.contextPath}/user/addtocart?productId=${product.productId}"
-			modelAttribute="cart">
+		<form:form method="POST" action="${pageContext.request.contextPath}/user/addtocart?productId=${product.productId}" modelAttribute="cart">
 			<input type="hidden" value="${product.productId}" />
-			<span class="h5">Quantity :<form:input class="form-control"
-					path="quantity" type="number" style="width:15%" /></span>
+			<span>Quantity :<form:input min="1" max="${product.stock}" class="form-control" path="quantity" type="number" style="width:15%" /></span>
 			<br>
 			<br>
 			<button type="submit" value="Add" class="btn btn-info">Add
 				to Cart</button>
-			<a href="${pageContext.request.contextPath}/allToys"
-				class="btn btn-info">Continue Shopping</a>
+			<a href="${pageContext.request.contextPath}/allToys" class="btn btn-info">Continue Shopping</a>
 		</form:form>
 	</div>
 </body>

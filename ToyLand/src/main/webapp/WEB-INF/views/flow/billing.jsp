@@ -16,24 +16,24 @@
 						<table>
 						<tr><td style="padding-right : 10px">
 						Floor
-						<form:input class="form-control" path="floor" />
+						<form:input class="form-control" path="floor" required="true"/>
 						</td><td>
 						Building Name
-						<form:input class="form-control" path="buildingName" />
+						<form:input class="form-control" path="buildingName" required="true"/>
 						</td></tr>
 						<tr><td style="padding-right : 10px">
 						Land Mark
-						<form:input class="form-control" path="landmark" />
+						<form:input class="form-control" path="landmark" required="true"/>
 						</td><td>
 						Area Name
-						<form:input class="form-control" path="areaName" />
+						<form:input class="form-control" path="areaName" required="true"/>
 						</td></tr>
 						<tr><td style="padding-right : 10px">
 						City
-						<form:input class="form-control" path="city" />
+						<form:input class="form-control" path="city" required="true"/>
 						</td><td>
 						State
-						<form:input class="form-control" path="state" />
+						<form:input class="form-control" path="state" required="true"/>
 						</td><tr>
 						</table>
 						Pincode:

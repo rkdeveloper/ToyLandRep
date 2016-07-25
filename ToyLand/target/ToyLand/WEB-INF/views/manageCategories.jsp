@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Category Management</title>
+
 </head>
 <body>
 <h2 align="center">Toy Categories</h2>
@@ -24,7 +25,7 @@
 					<c:forEach items="${categories}" var="category" varStatus="status">
 						<tr>
 							<td>${status.count}</td>
-							<td>${category.categoryId}</td>
+							<td>CAT00${category.categoryId}</td>
 							<td>${category.categoryName}</td>
 							<td>${category.categoryDescription}</td>
 							<td><a href="category/edit/${category.categoryId}" class="btn btn-default">Edit</a></td>

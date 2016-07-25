@@ -92,6 +92,8 @@
 			</video>
 		</div>
 	</div>
+	It's <%java.util.Date now = new java.util.Date(); %>
+	<%=now.getHours() %> : <%=now.getMinutes() %> : <%=now.getSeconds() %> now
 </body>
 </html>
 <%@include file="footer.jsp"%>

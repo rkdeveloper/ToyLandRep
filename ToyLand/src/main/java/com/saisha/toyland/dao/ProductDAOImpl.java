@@ -48,6 +48,7 @@ public class ProductDAOImpl implements ProductDAO{
 		 pd.setProductDescription(p.getProductDescription());
 		 pd.setProductPrice(p.getProductPrice());
 		 pd.setStock(p.getStock());
+//		 pd.setImg(p.getImg());
 		 session.saveOrUpdate(pd);
 		 tx.commit();
 		 session.close();

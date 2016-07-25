@@ -7,14 +7,14 @@
 <title>Toy Details</title>
 </head>
 <body>
-<div class="row">
-<div class="col-sm-3"></div>
-<div class="col-sm-6">
-	<img style="width: 500px; height: 400px"
-		src="<c:url value="/resources/images/${product.productId}.jpg" />" />
-</div>
-<div class="col-sm-3"></div> 
-</div>
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<img style="width: 500px; height: 400px"
+				src="<c:url value="/resources/images/${product.productId}.jpg" />" />
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
 	<br>
 	<br>
 	<div class=well>
@@ -43,15 +43,14 @@
 			</tr>
 		</table>
 
-		<form:form method="POST"
-			action="${pageContext.request.contextPath}/user/addtocart?productId=${product.productId}"
-			modelAttribute="cart">
+		<form:form method="POST" action="${pageContext.request.contextPath}/user/addtocart?productId=${product.productId}" modelAttribute="cart">
 			<input type="hidden" value="${product.productId}" />
-			<span class="h5">Quantity :<form:input path="quantity" type="number" style="width:15%" /></span>
+			<span>Quantity :<form:input min="1" max="${product.stock}" class="form-control" path="quantity" type="number" style="width:15%" /></span>
 			<br>
 			<br>
-			<button type="submit" value="Add" class="btn btn-info">Add to Cart</button>
-			<button type="button" class="btn btn-info">Continue Shopping</button>
+			<button type="submit" value="Add" class="btn btn-info">Add
+				to Cart</button>
+			<a href="${pageContext.request.contextPath}/allToys" class="btn btn-info">Continue Shopping</a>
 		</form:form>
 	</div>
 </body>

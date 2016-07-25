@@ -1,9 +1,6 @@
 <%@ include file="header.jsp"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<!DOCTYPE html>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <style>
@@ -56,7 +53,7 @@
 				<div class="form-group">
 					Email ID
 					<form:input class="form-control" path="email" />
-					<form:errors path="email" cssClass="error" />
+<%-- 					<form:errors path="email" cssClass="error" /> --%>
 				</div>
 				<div class="form-group">
 					Password
@@ -64,8 +61,7 @@
 					<form:errors path="password" cssClass="error" />
 				</div>
 				<div class="form-group">
-					Confirm Password <input class="form-control" type="password"
-						id="confirmpassword" /> <br />
+					Confirm Password <input class="form-control" type="password" id="confirmpassword" /> <br />
 				</div>
 			</div>
 			<div class="col-sm-6">
@@ -102,9 +98,10 @@
 				<div class="form-group">
 					<label>Contact number</label>
 					<form:input class="form-control" path="contactNumber" />
+					<form:errors path="contactNumber" cssClass="error" />
 				</div>
 				<div class="form-group">
-					<button type="submit" class="btn btn-info" value="Register">Register</button>
+					<button type="submit" class="btn btn-info" value="Register" onclick="return Validate()">Register</button>
 					<button type="reset" class="btn btn-info" value="reset">Reset</button>
 				</div>
 			</div>

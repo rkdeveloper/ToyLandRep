@@ -34,22 +34,28 @@
 	<hr>
 
 	<div class="row" ng-repeat="product in products | filter : search">
-		<div class="col-sm-3"></div>
-		<div class="col-sm-6">
-				<div class=well>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+				
 					<div class="row">
 						<div class="col-sm-3">
-							<a href="productdetails/{{product.productId}}"> 
-							<img style="width: 100px; height: 100px" src="<c:url value="/resources/images/{{product.productId}}.jpg" />" /></a>
+							<img style="width: 155px; height: 155px" src="${pageContext.request.contextPath}/resources/images/{{product.productId}}.jpg" />
 						</div>
 						<div class="col-sm-8">
-						<label><c:out value="{{product.productName}}" /></label><br>
-						<c:out value="{{product.productDescription}}" />
-						<br><br>
-						<label>Price :</label> Rs. <c:out value="{{product.productPrice}}" />/-
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<a href="productdetails/{{product.productId}}">
+									<h4><c:out value="{{product.productName}}" /></h4></a>
+								</div>
+								<div class="panel-body">
+									<c:out value="{{product.productDescription}}" />
+									<br><br>
+									<label>Price :</label> Rs. <c:out value="{{product.productPrice}}" />/-
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
+				
 		</div>
 	</div>
 </body>

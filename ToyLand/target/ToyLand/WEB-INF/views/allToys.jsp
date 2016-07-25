@@ -4,49 +4,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>All Toys Page</title>
+
+<script>
+ var toysApp = angular.module('toysApp',[]);
+ toysApp.controller('getToys', function($scope,$http,$location)
+		 {
+	 		$scope.products = ${products};
+	 		$scope.name = "ToyLand";
+	 		$scope.search = location.search.substring(6);
+ });
+</script>
+
 </head>
-<body>
-	<h3 align="center">Our exciting products</h3>
-	<hr>
+<body ng-app="toysApp" ng-controller="getToys" >
+	
 	<div class="row">
-		<div class="col-sm-3">
-			<div class="well well-lg">
-				<c:forEach items="${categories}" var="category">
-					<li><a href="#">${category.categoryName}</a></li>
-				</c:forEach>
-				<li><a href="allToys">All Toys</a></li>
+		<div class="col-sm-4"></div>
+			<div class="col-sm-3">
+				<h3>Our exciting products</h3>
 			</div>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-3">
+			<label>search for your favorite toy :</label>
+
+			<input type="text" class="form-control" name="search" ng-model="search" />
 		</div>
-		<div class="col-sm-6">
+	</div>
+	
+	<hr>
 
-			<!-- 			<table> -->
-			<%-- 				<c:forEach items="${products}" var="product"> --%>
-			<!-- 					<tr> -->
-			<%-- 						<td><a href="${product.productId}"><img --%>
-			<!-- 								style="width: 100px; height: 100px" -->
-			<%-- 								src="<c:url value="/resources/images/${product.productId}.jpg" />" /></a> --%>
-			<%-- 						<td><a href="${product.productId}"><c:out --%>
-			<%-- 									value="${product.productName}" /></a></td> --%>
-			<!-- 					</tr> -->
-			<%-- 				</c:forEach> --%>
-			<!-- 			</table> -->
-
-			<c:forEach items="${products}" var="product">
-				<div class=well>
+	<div class="row" ng-repeat="product in products | filter : search">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+				
 					<div class="row">
 						<div class="col-sm-3">
-							<a href="productdetails/${product.productId}">
-							<img style="width: 100px; height: 100px"
-								 src="<c:url value="/resources/images/${product.productId}.jpg" />" /></a>
+							<img style="width: 155px; height: 155px" src="${pageContext.request.contextPath}/resources/images/{{product.productId}}.jpg" />
 						</div>
 						<div class="col-sm-8">
-							<span><b>${product.productName}</b></span><br><br>
-							<span>${product.productDescription}</span><br>
-							Rs. <span>${product.productPrice}</span>/-
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<a href="productdetails/{{product.productId}}">
+									<h4><c:out value="{{product.productName}}" /></h4></a>
+								</div>
+								<div class="panel-body">
+									<c:out value="{{product.productDescription}}" />
+									<br><br>
+									<label>Price :</label> Rs. <c:out value="{{product.productPrice}}" />/-
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</c:forEach>
+				
 		</div>
 	</div>
 </body>

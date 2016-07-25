@@ -33,7 +33,7 @@
 		<transition to="processOrder" />
 	</action-state>
 
-	<view-state id="processOrder" view="thank-you.jsp">
+	<view-state id="processOrder" view="thankyou.jsp">
 		<transition on="submit" to="thankCustomer" />
 		<transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
 	</view-state>

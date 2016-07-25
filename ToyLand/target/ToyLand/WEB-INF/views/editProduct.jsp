@@ -28,9 +28,17 @@
 						<form:input class="form-control" path="manufacturer" />
 					</div>
 					<div class="form-group">
+						<label>Stock</label>
+						<form:input class="form-control" path="stock" />
+					</div>
+					<div class="form-group">
 						<label>Description</label>
 						<form:input class="form-control" path="productDescription" />
 					</div>
+<!-- 					<div class="form-group"> -->
+<!-- 						<label>Select image :</label> -->
+<!-- 						<input type="file" name="img" path="img" /> -->
+<!-- 					</div> -->
 					<br />
 					<input type="submit" class="btn btn-info" value="Modify Product" />
 				</form:form>
