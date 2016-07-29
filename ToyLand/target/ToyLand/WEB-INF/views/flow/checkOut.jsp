@@ -25,8 +25,8 @@
 			<div class="row" align="center">
 				<div class="col-lg-9">
 					<div class="h4">
-						<input type="submit" name="_eventId_submit" class="btn btn-info"
-							value="Confirm" />
+						<input type="submit" name="_eventId_submit" class="btn btn-info" value="Confirm" />
+						<a href="<c:url value="/user/viewcart?userName=${pageContext.request.userPrincipal.name}" />" class="btn btn-info"> Back to Cart</a>
 					</div>
 				</div>
 			</div>

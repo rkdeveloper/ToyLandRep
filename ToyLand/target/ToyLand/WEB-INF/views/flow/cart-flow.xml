@@ -5,24 +5,19 @@
 
 	<var name="cart" class="com.saisha.toyland.model.Cart" />
 
-	 
-
 	<action-state id="processCheckout">
-		<evaluate expression="cartDAOImpl.findById(requestParameters.cartId)"
-			result="cart"></evaluate>
+		<evaluate expression="cartDAOImpl.findById(requestParameters.cartId)" result="cart"></evaluate>
 		<transition to="InvalidCartWarning" on-exception="java.lang.NullPointerException" />
 		<transition to="collectCustomerInfo" />
 	</action-state>
 
-	<view-state id="collectCustomerInfo" view="billing.jsp"
-		model="cart">
+	<view-state id="collectCustomerInfo" view="billing.jsp" model="cart">
 		<transition on="submit" to="orderConfirmation" />
 		<transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
 	</view-state>
 
 
-	<view-state id="orderConfirmation" view="checkOut.jsp"
-		model="cart">
+	<view-state id="orderConfirmation" view="checkOut.jsp" model="cart">
 		<transition on="submit" to="saveOrder" />
 		<transition on="backToCollectCustomerInfo" to="collectCustomerInfo" />
 	</view-state>

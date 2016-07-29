@@ -27,8 +27,6 @@ public class CategoryDAOImpl implements CategoryDAO{
 		System.out.println(objId.toString());
 		if(objId != null)
 			System.out.println("new category added to the database");
-		else
-			System.out.println("new category cannot be added");
 		session.close();
 	}	
 	

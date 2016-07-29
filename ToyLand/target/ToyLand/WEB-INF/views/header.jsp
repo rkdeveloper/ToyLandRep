@@ -86,12 +86,12 @@
 							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Toyland Management 
 							<span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="addCategory">Add Category</a></li>
-									<li><a href="getCategory">View Categories</a></li>
-									<li><a href="addSupplier">Add Supplier</a></li>
-									<li><a href="getSupplier">View Suppliers</a></li>
-									<li><a href="addProduct">Add Toys</a></li>
-									<li><a href="getProduct">View Toys</a>
+									<li><a href="${pageContext.request.contextPath}/addCategory">Add Category</a></li>
+									<li><a href="${pageContext.request.contextPath}/getCategory">View Categories</a></li>
+									<li><a href="${pageContext.request.contextPath}/addSupplier">Add Supplier</a></li>
+									<li><a href="${pageContext.request.contextPath}/getSupplier">View Suppliers</a></li>
+									<li><a href="${pageContext.request.contextPath}/addProduct">Add Toys</a></li>
+									<li><a href="${pageContext.request.contextPath}/getProduct">View Toys</a>
 								</ul></li>
 
 							<li><a>Welcome "${pageContext.request.userPrincipal.name}"</a></li>

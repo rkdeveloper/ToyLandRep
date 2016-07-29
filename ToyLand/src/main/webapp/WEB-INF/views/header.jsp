@@ -2,7 +2,8 @@
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +13,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<link href="<spring:url value="/resources/css/bootstrap.css" />" rel="stylesheet" />
-<link type="text/css" rel="stylesheet" href="<spring:url value="/resources/css/mystyler.css" />" />
+<link href="<spring:url value="/resources/css/bootstrap.css" />"
+	rel="stylesheet" />
+<link type="text/css" rel="stylesheet"
+	href="<spring:url value="/resources/css/mystyler.css" />" />
 <script src="<spring:url value="/resources/js/html5shiv.min.js" />"></script>
 <script src="<spring:url value="/resources/js/respond.min.js" />"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="<spring:url value="/resources/jquery/jquery-2.2.4.min.js" />"></script>
+<script
+	src="<spring:url value="/resources/jquery/jquery-2.2.4.min.js" />"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<spring:url value="/resources/js/bootstrap.js"/>"></script>
 <!-- AngularJS files have been included here -->
@@ -56,6 +60,22 @@
 					src="${pageContext.request.contextPath}/resources/images/group01.gif" />
 			</div>
 		</div>
+		<sec:authorize access="hasRole('ROLE_ADMIN')">
+			<div align="right">
+				<h4 style="font-family: verdana;">
+					Welcome <span class="glyphicon glyphicon-king"></span>
+					"${pageContext.request.userPrincipal.name}"
+				</h4>
+			</div>
+		</sec:authorize>
+		<sec:authorize access="hasRole('ROLE_USER')">
+			<div align="right">
+				<h4 style="font-family: verdana;">
+					Welcome <span class="glyphicon glyphicon-user"></span>
+					"${pageContext.request.userPrincipal.name}"
+				</h4>
+			</div>
+		</sec:authorize>
 		<p></p>
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -66,60 +86,81 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="${pageContext.request.contextPath}/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="${pageContext.request.contextPath}/allToys">All Toys</a></li>
-						
-<!-- 						<li class="dropdown"><a class="dropdown-toggle" -->
-<!-- 							data-toggle="dropdown" href="allToys"> All Categories <span -->
-<!-- 								class="caret"></span></a> -->
-<!-- 							<ul class="dropdown-menu"> -->
-<%-- 								<c:forEach items="${categories}" var="category"> --%>
-<%-- 									<li><a href="#">${category.categoryName}</a></li> --%>
-<%-- 								</c:forEach> --%>
-<!-- 								<li><a href="allToys">All Toys</a></li> -->
-<!-- 							</ul></li> -->
+						<li class="active"><a
+							href="${pageContext.request.contextPath}/"><span
+								class="glyphicon glyphicon-home"></span> Home</a></li>
+						<li><a href="${pageContext.request.contextPath}/allToys">All
+								Toys</a></li>
 
-						<li><a href="${pageContext.request.contextPath}/getAboutUs">About Us</a></li>
-						<li><a href="${pageContext.request.contextPath}/getContactUs">Contact Us</a></li>
+						<!-- 						<li class="dropdown"><a class="dropdown-toggle" -->
+						<!-- 							data-toggle="dropdown" href="allToys"> All Categories <span -->
+						<!-- 								class="caret"></span></a> -->
+						<!-- 							<ul class="dropdown-menu"> -->
+						<%-- 								<c:forEach items="${categories}" var="category"> --%>
+						<%-- 									<li><a href="#">${category.categoryName}</a></li> --%>
+						<%-- 								</c:forEach> --%>
+						<!-- 								<li><a href="allToys">All Toys</a></li> -->
+						<!-- 							</ul></li> -->
+
+						<li><a href="${pageContext.request.contextPath}/getAboutUs">About
+								Us</a></li>
+						<li><a href="${pageContext.request.contextPath}/getContactUs">Contact
+								Us</a></li>
 
 						<sec:authorize access="hasRole('ROLE_ADMIN')">
-							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Toyland Management 
-							<span class="caret"></span></a>
+							<li class="dropdown"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#"> Toyland Management <span
+									class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="addCategory">Add Category</a></li>
-									<li><a href="getCategory">View Categories</a></li>
-									<li><a href="addSupplier">Add Supplier</a></li>
-									<li><a href="getSupplier">View Suppliers</a></li>
-									<li><a href="addProduct">Add Toys</a></li>
-									<li><a href="getProduct">View Toys</a>
+									<li><a
+										href="${pageContext.request.contextPath}/addCategory">Add
+											Category</a></li>
+									<li><a
+										href="${pageContext.request.contextPath}/getCategory">View
+											Categories</a></li>
+									<li><a
+										href="${pageContext.request.contextPath}/addSupplier">Add
+											Supplier</a></li>
+									<li><a
+										href="${pageContext.request.contextPath}/getSupplier">View
+											Suppliers</a></li>
+									<li><a
+										href="${pageContext.request.contextPath}/addProduct">Add
+											Toys</a></li>
+									<li><a
+										href="${pageContext.request.contextPath}/getProduct">View
+											Toys</a>
 								</ul></li>
-
-							<li><a>Welcome "${pageContext.request.userPrincipal.name}"</a></li>
-							<li><a><span class="glyphicon glyphicon-king"></span> Admin</a></li>
-							<li><a href="<c:url value="/perform_logout" />">
-							<span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
-						</sec:authorize>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="<c:url value="/perform_logout" />"> 
+						<span class="glyphicon glyphicon-log-out"></span>Logout
+						</a></li>
+					</ul>
+					</sec:authorize>
 					</ul>
 
 					<sec:authorize access="hasRole('ROLE_USER')">
-					<div align="right">
-						<ul class="nav navbar-nav">
-							<li><a><b><i>Welcome "${pageContext.request.userPrincipal.name}"</i></b></a></li>
+						<ul class="nav navbar-nav navbar-right">
 							<li><a
 								href="<c:url value="/user/viewcart?userName=${pageContext.request.userPrincipal.name}" />">
-								<span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-							<li><a href="${pageContext.request.contextPath}/perform_logout">
-								<span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-						</ul>	
-						</div>
+									<span class="glyphicon glyphicon-shopping-cart"></span> Cart
+							</a></li>
+							<li><a
+								href="${pageContext.request.contextPath}/perform_logout"> <span
+									class="glyphicon glyphicon-log-out"></span> Logout
+							</a></li>
+						</ul>
 					</sec:authorize>
-					
+
 					<c:if test="${pageContext.request.userPrincipal.name == null}">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="${pageContext.request.contextPath}/getSignUp">
-							<span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+									<span class="glyphicon glyphicon-user"></span> Sign Up
+							</a></li>
 							<li><a href="${pageContext.request.contextPath}/getLogin">
-							<span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+									<span class="glyphicon glyphicon-log-in"></span> Login
+							</a></li>
 						</ul>
 					</c:if>
 				</div>

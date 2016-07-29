@@ -22,7 +22,7 @@
 				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Name :</label>
-						<form:input path="supplierName" class="form-control" />
+						<form:input path="supplierName" class="form-control" required="true"/>
 						<form:errors path="supplierName" cssClass="error" />
 					</div>
 				</div>

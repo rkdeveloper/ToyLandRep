@@ -4,18 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cart</title>
-<script>
- var toysApp = angular.module('toysApp',[]);
- toysApp.controller('getToys', function($scope,$http,$location)
-		 {
-	 		$scope.products = ${products};
-	 		$scope.name = "ToyLand";
-	 		$scope.search = location.search.substring(6);
- });
-</script>
 </head>
 
-<body ng-app="toysApp" ng-controller="getToys">
+<body>
 	<h3 align="center">My Cart</h3> 
 	<div class="well">
 		<table class="table table-hover">

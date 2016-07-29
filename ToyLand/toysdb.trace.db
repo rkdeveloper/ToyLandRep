@@ -1,0 +1,224 @@
+2016-07-11 19:56:00 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-12 12:30:10 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-13 18:45:33 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-14 16:58:37 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-19 09:43:09 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-19 11:19:38 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-19 11:19:43 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-19 16:54:57 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-19 20:45:50 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-22 19:15:37 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-23 13:01:56 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-25 17:24:21 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-27 13:07:50 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-28 10:45:04 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-28 13:47:16 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more
+2016-07-29 11:11:17 database: wrong user or password; user: "PLAYER"
+org.h2.message.DbException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Engine.openSession(Engine.java:104)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:148)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-192]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 9 more

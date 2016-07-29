@@ -5,13 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.File;
@@ -26,7 +23,6 @@ import com.saisha.toyland.dao.ProductDAO;
 import com.saisha.toyland.model.Cart;
 import com.saisha.toyland.model.Category;
 import com.saisha.toyland.model.Product;
-import com.saisha.toyland.model.Supplier;
 
 @Controller
 public class ProductController {
@@ -50,6 +46,7 @@ public class ProductController {
 	public Cart initCart(){
 		return new Cart();
 	}
+	
 	@RequestMapping(value = "/addProduct", method = RequestMethod.POST)
 	public ModelAndView addProduct(@ModelAttribute("product") Product product, BindingResult result, HttpServletRequest request, ModelMap model) {
 		System.out.println("adding product");

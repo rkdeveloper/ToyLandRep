@@ -34,7 +34,7 @@
 					</div>
 					<div class="form-group">
 						<label>Price</label>
-						<form:input path="productPrice" min="100" class="form-control"/>
+						<form:input min="100" max="50000" path="productPrice" class="form-control"/>
 <%-- 						<form:errors path="productPrice" cssClass="error" /> --%>
 					</div>
 					<div class="form-group">

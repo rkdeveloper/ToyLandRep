@@ -23,7 +23,6 @@ import com.saisha.toyland.dao.CategoryDAO;
 import com.saisha.toyland.dao.UserDAO;
 import com.saisha.toyland.model.Authority;
 import com.saisha.toyland.model.Category;
-import com.saisha.toyland.model.Supplier;
 import com.saisha.toyland.model.User;
 
 @Controller
@@ -78,10 +77,10 @@ public class UserController {
 	public ModelAndView addUser(@Valid @ModelAttribute("user") User user, BindingResult result, ModelMap model) {
 		Authority authority = authorityDAO.getAuthorityById(2);
 		user.setAuthority(authority);
-		userDAO.addNewUser(user);
 		if(result.hasErrors()){
 			return new ModelAndView("newsignup");
 		}
+		userDAO.addNewUser(user);
 		return new ModelAndView("newlogin");
 	}
 }

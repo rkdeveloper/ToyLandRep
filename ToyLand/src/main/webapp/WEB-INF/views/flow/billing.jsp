@@ -47,6 +47,7 @@
 					</div>
 					<div class="form-group">
 						<input type="submit" class="btn btn-info" value="Proceed" name="_eventId_submit" />
+							<a href="<c:url value="/user/viewcart?userName=${pageContext.request.userPrincipal.name}" />" class="btn btn-info"> Back to Cart</a>
 <!-- 						<button type="reset" class="btn btn-info" value="reset">Reset</button> -->
 					</div>
 				</form:form>

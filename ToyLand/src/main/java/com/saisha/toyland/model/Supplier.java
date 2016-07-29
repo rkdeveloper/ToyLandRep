@@ -113,7 +113,7 @@ public class Supplier implements Serializable{
 	public void setState(String state) {
 		this.state = state;
 	}
-
+	
 //	@OneToMany(fetch=FetchType.LAZY, mappedBy="supplier")
 //	public Set<Product> getProductSet() {
 //		return productSet;
@@ -122,4 +122,5 @@ public class Supplier implements Serializable{
 //	public void setProductSet(Set<Product> productSet) {
 //		this.productSet = productSet;
 //	}
+	
 }
